@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Bank</title> <link rel="stylesheet" href="css/pagina1.css">
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script> 
+</head>
+    <body class="body1">
+
+        <center>
+            <h1>RETIRO</h1>
+        </center>
+        <nav id="menu">
+            <ul>
+                <li><a href="deposito.html">Depósito</a></li>
+                <li><a href="retiro.html">Retiro</a></li>
+                <li><a href="cajero.html">Pago de servicios</a>
+                    <ul>
+                        <li><a href="caess.html">Recibo de Energía Electrica</a></li>
+                        <li><a href="internet.html">Recibo de Internet</a></li>
+                        <li><a href="telefono.html">Recibo de Telefonía</a></li>
+                        <li><a href="agua.html">Recibo de Agua Potable</a></li>
+                    </ul>
+                </li>    
+            </ul>
+        </nav> 
+        <div>
+            <form>
+                
+                <input class="boton_2" type="button" value="Cerrar Sesion" onclick='cerrar(form)'>
+                
+            </form>
+        
+            <script>
+                function cerrar(form){
+                    if (form){
+                        location="index.html";
+                    } 
+                }
+            </script>
+        
+        </div> 
+     
+            <div class="login-box1">
+                <center> <h2>RETIRO</h2> 
+                    <label for="">Cuenta 1</label>
+                    <input type="text" name="Cantidad1" id="canti1" value="5000">
+                     <label for="">Cuenta 2</label>
+                     <input type="text" name="Cantidad2" id="canti2" value="1500"></center>
+                         <form action="">
+                            <center> <h2>¿Cuanto desea retirar?</h2>  
+                             <input type="text" name="" id="Cant" placeholder="Cantidad"></center>
+                             <br>
+                             <br>
+                          <center><input type="button" value="Retiro de Cuenta 1" id="boton1" onclick="formula3()">
+                          <input type="button" value="Retiro de Cuenta 2" id="boton2" onclick="formula4()"></center>
+                         </form>
+                         <script type="text/javascript">
+                             function formula3(){
+                                 var CantidadT=parseInt(document.getElementById('Cant').value);
+                                 var Cantidad1=parseInt(document.getElementById('canti1').value);
+                                 var Cantidad2=parseInt(document.getElementById('canti2').value);
+                                 document.getElementById('canti1').value=(Cantidad1-CantidadT);
+                             }
+                                 function formula4(){
+                                 var CantidadT=parseInt(document.getElementById('Cant').value);
+                                 var Cantidad1=parseInt(document.getElementById('canti1').value);
+                                 var Cantidad2=parseInt(document.getElementById('canti2').value);
+                                 document.getElementById('canti2').value=(Cantidad2-CantidadT); 
+                             }
+                        </script>
+            </div>
+        <form>
+    </body>
+</html>
