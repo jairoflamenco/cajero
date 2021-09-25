@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Bank</title> <link rel="stylesheet" href="css/pagina.css">
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " > </script>
+</head>
+<body>
+    <div class="login-box">
+        <img class="imagen1" src="img/logo.jpg.jpg" alt="">
+        <h1>Bienvenido a su Pokemon Bank</h1>
+        <form>
+                
+            <input type="password" name="c" id="" placeholder="Favor ingrese su PIN">
+            <input type="button" value="Ingresar" onclick='boton(form)'>
+            <!-- Boton esta conectado con la funcion donde la contraseña para ingresar es 1234 -->
+            
+            <a href="#">¿Olvido su PIN?</a><br>
+            <a href="#">¿Primera vez que ingresa?</a>  
+        
+        </form>
+    
+        <script>
+            function boton(form){
+                if (form.c.value=="1234"){
+                    location="cajero.html";
+                } else 
+                    alert("Error de PIN, favor ingresar PIN correcto.");
+            }
+            
+        
+        </script>
+    
+    </div> 
+</body>
+</html>
